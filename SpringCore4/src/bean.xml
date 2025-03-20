@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+   
+   
+        <bean id="dao" class="com.mainapp.Dao"></bean>
+        
+        <bean id="service" class="com.mainapp.Service">
+                <!--<property name="dao"  ref="dao"></property>--> <!-- it will setter of service -->
+              <constructor-arg  name="dao"  ref="dao"></constructor-arg>  <!-- it will set by constructor   -->
+        </bean>
+        
+        <bean id="controller" class="com.mainapp.Controller">
+        
+               <!--  <property name="service"  ref="service"></property> --> <!-- it will setter of controller -->
+               <constructor-arg name="service"  ref="service"></constructor-arg>
+        </bean>
+        
+</beans>
