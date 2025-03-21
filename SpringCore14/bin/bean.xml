@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+       
+       <!-- Default setter  -->
+   
+       <!-- <bean id="emp" class="com.mainapp.Employee" >
+             <property name="defaultSetOfBooks">
+                   <set>
+                       <value>java</value>
+                       <value>python</value>
+                       <value>java</value>
+                       <value>hindi</value>
+                       <value>Ada</value>
+                       <value>c++</value>
+                   </set>
+             </property>
+       </bean> -->
+       
+       
+       
+       
+       
+       <!-- Default Constructor -->
+       
+       <!-- <bean id="emp" class="com.mainapp.Employee" >
+             <constructor-arg name="defaultSetOfBooks">
+                   <set>
+                       <value>java</value>
+                       <value>python</value>
+                       <value>java</value>
+                       <value>hindi</value>
+                       <value>Ada</value>
+                       <value>c++</value>
+                   </set>
+             </constructor-arg>
+       </bean> -->
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       <!-- own implementation standalone through property -->
+       
+      <!--  <bean id="emp" class="com.mainapp.Employee" >
+             <property name="defaultSetOfBooks" ref="set">
+             </property>
+       </bean>
+       
+       <util:set id="set" set-class="java.util.HashSet">
+                       <value>java</value>
+                       <value>python</value>
+                       <value>java</value>
+                       <value>hindi</value>
+                       <value>Ada</value>
+                       <value>c++</value>
+       </util:set> -->
+       
+       
+        
+        
+        
+        
+        <!-- own implementation standalone through Constructor -->
+       
+       <!-- <bean id="emp" class="com.mainapp.Employee" >
+             <constructor-arg name="defaultSetOfBooks" ref="set">
+             </constructor-arg>
+       </bean>
+       
+       <util:set id="set" set-class="java.util.HashSet">
+                       <value>java</value>
+                       <value>python</value>
+                       <value>java</value>
+                       <value>hindi</value>
+                       <value>Ada</value>
+                       <value>c++</value>
+       </util:set> -->
+       
+       
+       
+       
+       
+       
+       <!-- Seperate Bean tag  (custome collection) constructor -->
+         
+         
+        <!--  <bean id="emp" class="com.mainapp.Employee" >
+             <constructor-arg name="defaultSetOfBooks" ref="set">
+             </constructor-arg>
+         </bean>
+         
+         
+         <bean id="set" class="java.util.HashSet">
+              <constructor-arg>
+                 <set>
+                       <value>java</value>
+                       <value>python</value>
+                       <value>java</value>
+                       <value>hindi</value>
+                       <value>Ada</value>
+                       <value>c++</value>
+                 </set>
+              </constructor-arg>
+         </bean>--> 
+         
+         
+         
+         
+         
+         
+         
+         <!-- -Seperate bean tag   by property-->
+         
+        <!--  <bean id="emp" class="com.mainapp.Employee" >
+             <property name="defaultSetOfBooks" ref="set">
+             </property>
+         </bean>
+         
+         
+         <bean id="set" class="java.util.HashSet">
+              <constructor-arg>
+                 <set>
+                       <value>java</value>
+                       <value>python</value>
+                       <value>java</value>
+                       <value>hindi</value>
+                       <value>Ada</value>
+                       <value>c++</value>
+                 </set>
+              </constructor-arg>
+         </bean> -->
+         
+         
+         
+         
+         
+         
+         
+         <!-- user defined by constructor -->
+         
+         
+       <!--  <bean id="acc1" class="com.mainapp.Account">
+           <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+         <bean id="acc2" class="com.mainapp.Account">
+           <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <property name="accounts">
+               <set>
+                  <ref bean="acc1"/>
+                  <ref bean="acc2"/>
+               </set>
+            </property>
+        </bean> -->
+        
+        
+        
+      
+      
+      
+      
+      
+        
+        
+         <!-- user defined by constructor -->
+         
+         
+        <!-- <bean id="acc1" class="com.mainapp.Account">
+           <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+         <bean id="acc2" class="com.mainapp.Account">
+           <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <constructor-arg name="accounts">
+               <set>
+                  <ref bean="acc1"/>
+                  <ref bean="acc2"/>
+               </set>
+            </constructor-arg>
+        </bean> -->
+        
+        
+        
+        
+        
+        
+        
+        <!-- My owm implementation     user defined by standalone set by constructor -->
+        
+       <!--  <bean id="acc1" class="com.mainapp.Account">
+           <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+         <bean id="acc2" class="com.mainapp.Account">
+           <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <constructor-arg name="accounts" ref="set">
+               
+            </constructor-arg>
+        </bean> 
+        
+        
+        <util:set id="set" set-class="java.util.HashSet">
+                  <ref bean="acc1"/>
+                  <ref bean="acc2"/>
+        </util:set>
+        
+         -->
+        
+        
+        
+        
+        
+        
+        
+         <!-- -seperate bean tag My own implementation of user defined  -->
+         
+         
+          <!-- <bean id="acc1" class="com.mainapp.Account">
+           <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+         <bean id="acc2" class="com.mainapp.Account">
+           <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <constructor-arg name="accounts" ref="set">
+               
+            </constructor-arg>
+        </bean> 
+        
+        
+       <bean id="set" class="java.util.HashSet">
+       
+              <constructor-arg>
+                   <set>
+                      <ref bean="acc1"/>
+                      <ref bean="acc2"/>
+                   </set>
+              </constructor-arg>
+       </bean>
+         -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- -seperate bean tag My own implementation of user defined  -->
+         
+         
+          <bean id="acc1" class="com.mainapp.Account">
+           <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+         <bean id="acc2" class="com.mainapp.Account">
+           <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <property name="accounts" ref="set">
+               
+            </property>
+        </bean> 
+        
+        
+       <bean id="set" class="java.util.HashSet">
+       
+              <constructor-arg>
+                   <set>
+                      <ref bean="acc1"/>
+                      <ref bean="acc2"/>
+                   </set>
+              </constructor-arg>
+       </bean>
+       
+       
+        
+        
+</beans>

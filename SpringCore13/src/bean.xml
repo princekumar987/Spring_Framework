@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+       
+      <!-- Default by setter -->
+      
+      
+   
+     <!--  <bean id="emp" class="com.mainapp.Employee" > 
+           <property name="defaultListOfBooks">
+                <list>
+                    <value>java</value>
+                     <value>python</value>
+                     <value>AI</value>
+                </list>
+           </property>
+       </bean>   -->  
+       
+       
+       
+       
+       <!-- Default by constructor -->
+       
+       
+       
+        <!-- <bean id="emp" class="com.mainapp.Employee" > 
+           <constructor-arg name="defaultListOfBooks">
+                <list>
+                    <value>java</value>
+                     <value>python</value>
+                      <value>AI</value>
+                </list>
+           </constructor-arg >
+       </bean>  -->
+       
+       
+       
+       
+      <!--  standalone by by setter -->
+      
+      
+      
+     <!--  <bean id="emp" class="com.mainapp.Employee" > 
+           <property name="defaultListOfBooks" ref="list"></property>
+       </bean> 
+       
+      
+      <util:list id="list" list-class="java.util.LinkedList">
+          <value>java</value>
+          <value>python</value>
+          <value>AI</value>
+      </util:list>  -->
+      
+      
+      
+      
+      <!-- standalone by constructor -->
+      
+      
+      
+       <!-- <bean id="emp" class="com.mainapp.Employee" > 
+           <constructor-arg name="defaultListOfBooks" ref="list"></constructor-arg>
+       </bean> 
+       
+      
+      <util:list id="list" list-class="java.util.LinkedList">
+          <value>java</value>
+          <value>python</value>
+          <value>AI</value>
+      </util:list>  -->
+      
+      
+      
+      <!-- seperate beean tag (custom collection) -->
+      
+      
+     <!--  <bean id="emp" class="com.mainapp.Employee" > 
+           <constructor-arg name="defaultListOfBooks" ref="list"></constructor-arg>
+      </bean> 
+      
+      <bean id="list" class="java.util.LinkedList">
+          <constructor-arg>
+              <list>
+                   <value>Java</value>
+                   <value>python</value>
+                   <value>AI</value>
+              </list>
+          </constructor-arg>
+      </bean>
+       -->
+       
+       
+       
+       <!--  own implementaion  Default implementation ArrayList by property -->
+       
+       
+       <!-- <bean id="acc1" class="com.mainapp.Account">
+          <constructor-arg name="an" value="9090"></constructor-arg>
+          <constructor-arg name="aname" value="yahoo"></constructor-arg>
+       </bean>
+       
+       <bean id="acc2" class="com.mainapp.Account">
+          <constructor-arg name="an" value="9080"></constructor-arg>
+          <constructor-arg name="aname" value="ykdoo"></constructor-arg>
+       </bean>
+       
+       <bean id="emp" class="com.mainapp.Employee">
+            <property name="defaultListOfAccount">
+                <list>
+                    <ref bean="acc1"/>
+                    <ref bean="acc2"/>
+                </list>
+            </property>
+       </bean> 
+       -->
+      
+      
+      
+         <!--  own implementaion  Default implementation ArrayList by constructor -->
+      
+       
+       
+       <!-- <bean id="acc1" class="com.mainapp.Account">
+          <constructor-arg name="an" value="9090"></constructor-arg>
+          <constructor-arg name="aname" value="yahoo"></constructor-arg>
+       </bean>
+       
+       <bean id="acc2" class="com.mainapp.Account">
+          <constructor-arg name="an" value="9080"></constructor-arg>
+          <constructor-arg name="aname" value="ykdoo"></constructor-arg>
+       </bean>
+       
+       <bean id="emp" class="com.mainapp.Employee">
+            <constructor-arg name="defaultListOfAccount">
+                <list>
+                    <ref bean="acc1"/>
+                    <ref bean="acc2"/>
+                </list>
+            </constructor-arg>
+       </bean>  -->
+       
+       
+       
+      
+      
+      <!--  standalone list own implementation through property  -->
+      
+      
+      
+      <!-- <bean id="acc1" class="com.mainapp.Account">
+          <constructor-arg name="an" value="9090"></constructor-arg>
+          <constructor-arg name="aname" value="yahoo"></constructor-arg>
+       </bean>
+       
+       <bean id="acc2" class="com.mainapp.Account">
+          <constructor-arg name="an" value="9080"></constructor-arg>
+          <constructor-arg name="aname" value="ykdoo"></constructor-arg>
+       </bean>
+       
+       <bean id="emp" class="com.mainapp.Employee">
+            <property name="defaultListOfAccount" ref="list"> </property>
+       </bean> 
+       
+       <util:list id="list" list-class="java.util.LinkedList">
+              <ref bean="acc1"/>
+               <ref bean="acc2"/>
+       </util:list> -->
+       
+       
+       
+       
+        <!--  standalone list own implementation through  constructor  -->
+        
+        
+       <!-- <bean id="acc1" class="com.mainapp.Account">
+          <constructor-arg name="an" value="9090"></constructor-arg>
+          <constructor-arg name="aname" value="yahoo"></constructor-arg>
+       </bean>
+       
+       <bean id="acc2" class="com.mainapp.Account">
+          <constructor-arg name="an" value="9080"></constructor-arg>
+          <constructor-arg name="aname" value="ykdoo"></constructor-arg>
+       </bean>
+       
+       <bean id="emp" class="com.mainapp.Employee">
+            <constructor-arg name="defaultListOfAccount" ref="list"> </constructor-arg>
+       </bean> 
+       
+       <util:list id="list" list-class="java.util.LinkedList">
+              <ref bean="acc1"/>
+               <ref bean="acc2"/>
+       </util:list>
+        -->
+        
+        
+        
+        
+      <!--   own implementation through  seperate bean  -->  
+        
+        
+        
+        
+       <bean id="acc1" class="com.mainapp.Account">
+          <constructor-arg name="an" value="9090"></constructor-arg>
+          <constructor-arg name="aname" value="yahoo"></constructor-arg>
+       </bean>
+       
+       <bean id="acc2" class="com.mainapp.Account">
+          <constructor-arg name="an" value="9080"></constructor-arg>
+          <constructor-arg name="aname" value="ykdoo"></constructor-arg>
+       </bean>
+       
+       <bean id="emp" class="com.mainapp.Employee">
+            <constructor-arg name="defaultListOfAccount" ref="list"> </constructor-arg>
+       </bean> 
+       
+       <bean id="list" class="java.util.LinkedList">
+           <constructor-arg>
+               <list>
+                  <ref  bean="acc1"/>
+                  <ref  bean="acc2"/>
+               </list>
+           </constructor-arg>
+       </bean>
+       
+              
+        
+        
+</beans>
