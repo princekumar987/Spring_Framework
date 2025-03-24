@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+       
+      <!-- by setter  -->
+      
+     <!--  <bean id="emp" class="com.mainapp.Employee">
+             <property name="mapOfBooks">
+                <map>
+                   <entry key="a1" value="java1"></entry>
+                   <entry key="a2" value="java2"></entry>
+                   <entry key="a3" value="java3"></entry>
+                   <entry key="a4" value="java4"></entry>
+                </map>
+             </property>
+      </bean> -->
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <!-- through constructor -->
+      
+       <!-- <bean id="emp" class="com.mainapp.Employee">
+             <constructor-arg name="mapOfBooks">
+                <map>
+                   <entry key="a1" value="java1"></entry>
+                   <entry key="a2" value="java2"></entry>
+                   <entry key="a3" value="java3"></entry>
+                   <entry key="a4" value="java4"></entry>
+                </map>
+             </constructor-arg>
+       </bean> -->
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       <!-- my own implemetation by standalone  by property-->
+       
+       <!-- <bean id="emp" class="com.mainapp.Employee">
+             <property name="mapOfBooks" ref="map">
+                
+             </property>
+       </bean>
+       
+       
+       <util:map id="map" map-class="java.util.HashMap">
+                  <entry key="a1" value="java1"></entry>
+                   <entry key="a2" value="java2"></entry>
+                   <entry key="a3" value="java3"></entry>
+                   <entry key="a4" value="java4"></entry>
+       </util:map> -->
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        <!-- my own implemetation by standalone  by constructor-->
+       
+      <!--  <bean id="emp" class="com.mainapp.Employee">
+             <constructor-arg name="mapOfBooks" ref="map">
+                 </constructor-arg>
+       </bean>
+       
+       
+       <util:map id="map" map-class="java.util.HashMap">
+                  <entry key="a1" value="java1"></entry>
+                   <entry key="a2" value="java2"></entry>
+                   <entry key="a3" value="java3"></entry>
+                   <entry key="a4" value="java4"></entry>
+       </util:map> -->
+       
+       
+       
+       
+       
+       
+       
+       
+       <!-- bean sepearate implementation  by setter -->
+       
+       
+       <!-- <bean id="emp" class="com.mainapp.Employee">
+             <property name="mapOfBooks" ref="map">
+                 </property>
+       </bean>
+       
+       
+       <bean id="map" class="java.util.HashMap">
+              <constructor-arg>
+                   <map>
+                   <entry key="123a1" value="java1"></entry>
+                   <entry key="456a2" value="java2"></entry>
+                   <entry key="2a3" value="java3"></entry>
+                   <entry key="45a4" value="java4"></entry>
+                   </map>  
+              </constructor-arg>
+       </bean>
+        -->
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        <!-- bean sepearate implementation  by constructor -->
+       
+       
+     <!--   <bean id="emp" class="com.mainapp.Employee">
+             <constructor-arg name="mapOfBooks" ref="map">
+                 </constructor-arg >
+       </bean>
+       
+       
+       <bean id="map" class="java.util.HashMap">
+              <constructor-arg>
+                   <map>
+                   <entry key="123a1" value="java1"></entry>
+                   <entry key="456a2" value="java2"></entry>
+                   <entry key="2a3" value="java3"></entry>
+                   <entry key="45a4" value="java4"></entry>
+                   </map>  
+              </constructor-arg>
+       </bean> -->
+       
+       
+       
+       
+       
+       <!-- -by setter  userdefined class  -->
+       
+       
+      <!--   <bean id="acc1" class="com.mainapp.Account">
+           <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+         <bean id="acc2" class="com.mainapp.Account">
+           <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <property name="mapOfBooks">
+               <map>
+                 <entry key="a1" value-ref="acc1"></entry>
+                 <entry key="a2" value-ref="acc2"></entry>
+               </map> 
+            </property>
+         </bean> 
+         -->
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       <!-- by constructor userdefined class -->
+       
+      
+       
+       
+        <!-- <bean id="acc1" class="com.mainapp.Account">
+           <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+         <bean id="acc2" class="com.mainapp.Account">
+           <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <constructor-arg name="mapOfBooks">
+               <map>
+                 <entry key="a1" value-ref="acc1"></entry>
+                 <entry key="a2" value-ref="acc2"></entry>
+               </map> 
+            </constructor-arg >
+         </bean>  -->
+         
+         
+         
+         
+         
+         
+         <!-- my own impementation bye setter  standalone-->
+         
+         
+        <!-- <bean id="acc1" class="com.mainapp.Account">
+            <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+        <bean id="acc2" class="com.mainapp.Account">
+            <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <property name="mapOfBooks" ref="map">
+              
+            </property >
+         </bean> 
+         
+         
+         <util:map id="map" map-class="java.util.HashMap">
+                 <entry key="a1" value-ref="acc1"></entry>
+                 <entry key="a2" value-ref="acc2"></entry>
+         </util:map> -->
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          <!-- my own impementation bye constructor standalone -->
+         
+         
+        <!-- <bean id="acc1" class="com.mainapp.Account">
+            <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+        <bean id="acc2" class="com.mainapp.Account">
+            <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <constructor-arg name="mapOfBooks" ref="map">
+              
+            </constructor-arg>
+         </bean> 
+         
+         
+         <util:map id="map" map-class="java.util.HashMap">
+                 <entry key="a1" value-ref="acc1"></entry>
+                 <entry key="a2" value-ref="acc2"></entry>
+         </util:map>
+        -->
+        
+        
+        
+        
+        
+        <!-- my own impementation  bean separation  bye constructor  -->
+         
+         
+        <!-- <bean id="acc1" class="com.mainapp.Account">
+            <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+        <bean id="acc2" class="com.mainapp.Account">
+            <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <constructor-arg name="mapOfBooks" ref="map">
+              
+            </constructor-arg>
+         </bean> 
+         
+         
+        <bean id="map" class="java.util.HashMap">
+            <constructor-arg>
+                <map>
+                 <entry key="a1" value-ref="acc1"></entry>
+                 <entry key="a2" value-ref="acc2"></entry>
+                </map>
+            </constructor-arg>
+        </bean> -->
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       <!-- my own impementation  bean separation  bye property  -->
+         
+         
+        <bean id="acc1" class="com.mainapp.Account">
+            <constructor-arg name="an" value="4564"></constructor-arg>
+            <constructor-arg name="aname" value="jffghjt"></constructor-arg>
+        </bean> 
+        
+        <bean id="acc2" class="com.mainapp.Account">
+            <constructor-arg name="an" value="234"></constructor-arg>
+            <constructor-arg name="aname" value="dgt"></constructor-arg>
+        </bean> 
+        
+        
+        <bean id="emp" class="com.mainapp.Employee">
+            <property name="mapOfBooks" ref="map">
+              
+            </property>
+         </bean> 
+         
+         
+        <bean id="map" class="java.util.HashMap">
+            <constructor-arg>
+                <map>
+                 <entry key="a1" value-ref="acc1"></entry>
+                 <entry key="a2" value-ref="acc2"></entry>
+                </map>
+            </constructor-arg>
+        </bean>
+       
+       
+        
+        
+</beans>

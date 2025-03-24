@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+       
+     <!-- by names -->  
+       
+     <!-- <bean id="account" class="com.mainapp.Account">
+          <property name="an" value="123"></property>
+           <property name="aname" value="rahul"></property>
+     </bean>  
+     
+      <bean id="adhaar" class="com.mainapp.Adhaar">
+          <property name="adno" value="1239876"></property>
+           <property name="adharname" value="Rahul Kumar"></property>
+     </bean> 
+     
+     <util:list id="listofbooks">
+           <value>java</value>
+            <value>python</value>
+             <value>Ai</value>
+     </util:list> 
+     
+     
+     <bean id="emp" class="com.mainapp.Employee" autowire="byName">
+     </bean> -->
+        
+        
+        
+        
+      <!--  by types -->  
+      
+      
+      
+     <!-- <bean id="acc" class="com.mainapp.Account">
+          <property name="an" value="123"></property>
+           <property name="aname" value="rahul"></property>
+     </bean>  
+     
+      <bean id="adh" class="com.mainapp.Adhaar">
+          <property name="adno" value="1239876"></property>
+           <property name="adharname" value="Rahul Kumar"></property>
+     </bean> 
+     
+     <util:list id="list">
+           <value>java</value>
+            <value>python</value>
+             <value>Ai</value>
+     </util:list> 
+     
+     
+     <bean id="emp" class="com.mainapp.Employee" autowire="byType">
+     </bean>
+         -->
+         
+         
+         
+         
+      <!-- when multiple bean for same class -->   
+        
+        
+        
+    <!--  <bean id="account" class="com.mainapp.Account">
+          <property name="an" value="123"></property>
+           <property name="aname" value="rahul98"></property>
+     </bean>  
+     
+     <bean id="acc" class="com.mainapp.Account">
+          <property name="an" value="123"></property>
+           <property name="aname" value="rahul"></property>
+     </bean>  
+     
+      <bean id="adhaar" class="com.mainapp.Adhaar">
+          <property name="adno" value="1239876"></property>
+           <property name="adharname" value="Rahul Kumar"></property>
+     </bean> 
+     
+     <util:list id="listofbooks">
+           <value>java</value>
+            <value>python</value>
+             <value>Ai</value>
+     </util:list> 
+     
+     
+     <bean id="emp" class="com.mainapp.Employee" autowire="byName">
+     </bean> -->
+           
+           
+           
+           
+           
+      <!-- multiple bean same class or same name  through by types -->     
+           
+           
+     <!--  <bean id="account1" class="com.mainapp.Account" autowire-candidate="false" >
+         <property name="an" value="123"></property>
+           <property name="aname" value="rahul98"></property>
+     </bean>  
+     
+     <bean id="account2" class="com.mainapp.Account">
+          <property name="an" value="123"></property>
+           <property name="aname" value="rahul"></property>
+     </bean>  
+     
+      <bean id="adhaar" class="com.mainapp.Adhaar">
+          <property name="adno" value="1239876"></property>
+           <property name="adharname" value="Rahul Kumar"></property>
+     </bean> 
+     
+     <util:list id="listofbooks">
+           <value>java</value>
+            <value>python</value>
+             <value>Ai</value>
+     </util:list> 
+     
+     
+     <bean id="emp" class="com.mainapp.Employee" autowire="byType">
+     </bean>
+      
+      -->
+     
+     
+     
+     
+     
+     
+      <!-- multiple bean same class or same name  through by types -->     
+           
+        
+        
+     <!-- <bean id="account1" class="com.mainapp.Account" autowire-candidate="false" >
+         <property name="an" value="123"></property>
+           <property name="aname" value="rahul98"></property>
+     </bean>  
+     
+     <bean id="account2" class="com.mainapp.Account">
+          <property name="an" value="123"></property>
+           <property name="aname" value="rah55ul"></property>
+     </bean> 
+     
+     <bean id="account3" class="com.mainapp.Account">
+          <property name="an" value="123"></property>
+           <property name="aname" value="rahu34l"></property>
+     </bean> 
+     <bean id="account4" class="com.mainapp.Account" primary="true">
+          <property name="an" value="123456"></property>
+           <property name="aname" value="rahu33l"></property>
+     </bean>  
+     
+      <bean id="adhaar" class="com.mainapp.Adhaar">
+          <property name="adno" value="1239876"></property>
+           <property name="adharname" value="Rahul Kumar"></property>
+     </bean> 
+     
+     <util:list id="listofbooks">
+           <value>java</value>
+            <value>python</value>
+             <value>Ai</value>
+     </util:list> 
+     
+     
+     <bean id="emp" class="com.mainapp.Employee" autowire="byType">
+     </bean>
+       -->
+       
+       
+       
+       
+       
+       <!-- autorite constructor  one fail all fail  -->
+       
+       
+       
+       
+     <bean id="account" class="com.mainapp.Account" >
+         <property name="an" value="123"></property>
+           <property name="aname" value="rahul98"></property>
+     </bean>  
+     
+     <bean id="account2" class="com.mainapp.Account">
+          <property name="an" value="123"></property>
+           <property name="aname" value="rah55ul"></property>
+     </bean> 
+     
+     <bean id="account3" class="com.mainapp.Account">
+          <property name="an" value="123"></property>
+           <property name="aname" value="rahu34l"></property>
+     </bean> 
+     <bean id="account4" class="com.mainapp.Account" >
+          <property name="an" value="123456"></property>
+           <property name="aname" value="rahu33l"></property>
+     </bean>  
+     
+      <bean id="adhaar" class="com.mainapp.Adhaar">
+          <property name="adno" value="1239876"></property>
+           <property name="adharname" value="Rahul Kumar"></property>
+     </bean> 
+     
+     <util:list id="listofbooks">
+           <value>java</value>
+            <value>python</value>
+             <value>Ai</value>
+     </util:list> 
+     
+     
+     <bean id="emp" class="com.mainapp.Employee" autowire="constructor">
+     </bean>
+      
+        
+    
+     
+                 
+</beans>
